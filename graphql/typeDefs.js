@@ -1,6 +1,6 @@
 const { gql } = require('apollo-server');
 
-module.exports = gql`
+module.exports = gql`    # we have written everything inside gql so we don't need to import the resolvers as such
   type Post {     # so this alone is not doing something actually is an object defined which will be use in query
     id: ID!
     body: String!
@@ -41,7 +41,7 @@ module.exports = gql`
   }
   type Mutation {     #these are functions that are going to be used and name on which logic will be written in resolvers
     register(registerInput: RegisterInput): User!
-    login(username: String!, password: String!): User!
+    login(username: String!, password: String!): User!    # so this signifies that after function non NULL User will be given as a result
     createPost(body: String!): Post!
     deletePost(postId: ID!): String!
     createComment(postId: String!, body: String!): Post!

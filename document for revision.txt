@@ -21,6 +21,12 @@
 -> index.js: same as monogoDb 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+steps for development: 
+1> index.js setup 
+2> Schemas for monogoDb
+3> typeDefs and resolvers are written parallaly
+4> index to put all resolvers together
+
 
 ***********
 *parents = The result of the resolver for the parent field. This parameter is useful when resolving nested fields.
