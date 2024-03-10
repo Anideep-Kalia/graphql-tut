@@ -37,7 +37,7 @@ module.exports = {
         throw new UserInputError('User not found', { errors });
       }
 
-      const match = await bcrypt.compare(password, user.password);
+      const match = await bcrypt.compare(password, user.password);   // user in line 33
       if (!match) {
         errors.general = 'Wrong crendetials';
         throw new UserInputError('Wrong crendetials', { errors });
