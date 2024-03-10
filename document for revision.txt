@@ -1,0 +1,32 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> graphql:s
+. resolvers: functions of elements defined in schema contains 4 parameters{parent, Arguements, Context, Info}  //Info is not used in this
+- comments.js
+- index.js
+- post.js
+- users.js
+
+. typedef.js: GraphQL's schema
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> models:schemas for mongodb
+. Post.js
+. User.js
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> util: these are the context used in resolvers
+. check-auth.js : jsonweb token shit and authentication
+. validators.js : vaildators not only for frontend & backend but also for graphql has of login page and register page
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+-> config.js: contians all the sensitive info and module.exports is used to export
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> index.js: same as monogoDb 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+***********
+*parents = The result of the resolver for the parent field. This parameter is useful when resolving nested fields.
+
+*Arguements = Arguments: The arguments passed to the field in the query.
+
+*Context: = An object shared across all resolvers for a particular request. It can contain information such as the currently logged-in user, database connections, and so on.
+
+*Info =  Contains information about the execution state of the GraphQL operation, including the query AST (Abstract Syntax Tree) and the schema.
