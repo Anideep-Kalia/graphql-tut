@@ -51,9 +51,9 @@ module.exports = {
         token
       };
     },
-    async register(
-      _,
-      {
+
+
+    async register(_,{
         registerInput: { username, email, password, confirmPassword }
       }
     ) {
@@ -67,7 +67,7 @@ module.exports = {
       if (!valid) {
         throw new UserInputError('Errors', { errors });
       }
-      // TODO: Make sure user doesnt already exist
+      // Make sure user doesnt already exist
       const user = await User.findOne({ username });
       if (user) {
         throw new UserInputError('Username is taken', {
